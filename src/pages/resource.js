@@ -118,7 +118,7 @@ const Resource = () => {
       <tbody>
         <tr>
           <td>{resource.title}</td>
-          <td  style={{maxWidth:'200px'}}><a style={{overflowWrap:'break-word'}} href={resource.link} target="blank">{resource.link}</a></td>
+          <td  style={{maxWidth:'100px'}}><a style={{overflowWrap:'break-word'}} href={resource.link} target="blank">{resource.link}</a></td>
           <td style={{textAlign:"center"}} className="action">
             <div className="iconEdit">
               <ModalUpdateResorce id = {resource.id}/>

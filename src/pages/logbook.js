@@ -64,6 +64,7 @@ const Logbook = () => {
                   placeholder="Title " 
                   type="text" 
                   id="title" 
+                  maxLength={20}
                   value={title} 
                   onChange={(e)=>setTitle(e.target.value)}
                   required/>
@@ -72,7 +73,6 @@ const Logbook = () => {
                 <Form.Control 
                   placeholder="Description" 
                   type="text" 
-                  maxLength={20}
                   value={description} 
                   onChange={(e)=>setDesription(e.target.value)}
                   required/>
@@ -126,7 +126,7 @@ const Logbook = () => {
       <tbody>
         <tr>
           <td>{logBook.title}</td>
-          <td style={{maxWidth:'200px',overflowWrap:'break-word'}}>{logBook.description}</td>
+          <td style={{maxWidth:'100px',overflowWrap:'break-word'}}>{logBook.description}</td>
           <td style={{textAlign:"center",alignItems:'center'}} className="action">
             <div className="iconEdit">
               <ModalUpdateLogBook id={logBook.id}/>
