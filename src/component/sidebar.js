@@ -3,9 +3,25 @@ import { NavLink, Outlet} from 'react-router-dom';
 import { motion } from 'framer-motion';
 import React from 'react';
 const Sidebar = () =>{
+
   return (
     <div className='App'>
-      <div className="sidebar">
+      <div className='mobileNavbar'>
+        <h2>ACADEMY</h2>
+        <div className='mobileNavbar-item'> 
+          <NavLink to="Todo">
+            <p>To Do</p>
+          </NavLink>
+          <NavLink to="LogBook">
+            <p>Log Book</p>
+          </NavLink>
+          <NavLink to="Resource">
+            <p>Resource</p>
+          </NavLink>
+        </div>
+        
+      </div>
+      <div className="sidebar d-none d-md-block">
         <h1>ACADEMY</h1>
         <hr/>
         <div  className="sidebar-item">
@@ -17,7 +33,6 @@ const Sidebar = () =>{
               <p>To Do</p>
             </NavLink>
           </motion.div >
-          
           <motion.div whileTap={{scale:0.8}}>
             <NavLink to="LogBook" style={{display:'block'}}
             className={({ isActive, isPending }) =>
@@ -35,7 +50,6 @@ const Sidebar = () =>{
               <p>Resource</p>
             </NavLink>
           </motion.div>
-          
         </div>
       </div>
       <div className='content'>

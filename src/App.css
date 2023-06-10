@@ -55,9 +55,8 @@ a{
   text-decoration: none;
 }
 .active{
-  background-color:#0069E0;
+  background-color:transparent;
   opacity: 100%;
-
 }
 .content{
   grid-area: b;
@@ -65,6 +64,46 @@ a{
   margin-right: 20px;
   border-radius: 20px;
 }
+.mobileNavbar{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .App{
+    display: flex;
+    flex-direction:column;
+  }
+  .mobileNavbar{
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 10px 20px;
+    gap:20px;
+    background: linear-gradient(350deg, rgba(66,66,213,1) 0%, rgba(21,131,255,1) 51%);
+  }
+  .mobileNavbar-item{
+    display: flex;
+    gap: 10px;
+  }
+  .mobileNavbar p{
+    color: white;
+    margin-bottom: 0;
+  }
+  .active{
+    opacity: 100%;
+    font-weight: 600;
+
+  }
+  .navbar{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .content{
+    margin-inline: 20px;
+    margin-block: 20px;
+  }
+}
+  
 .header{
   background: rgb(66,66,213);
   background: linear-gradient(270deg, rgba(66,66,213,1) 0%, rgba(21,131,255,1) 51%);
