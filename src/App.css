@@ -136,6 +136,11 @@ a{
 .header-item h3:hover{
   opacity: 100%;
 }
+@media screen and (max-width: 768px) {
+  .header{
+    display: none;
+  }
+}
 .content-outlet{
   margin-inline: 30px;
 }
@@ -168,6 +173,16 @@ a{
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .home {
+    border-radius: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10vh;
+    bottom: 10px;
+    left: 10px;
+  }
 }
 
 .firstpage{

@@ -22,7 +22,6 @@ function App() {
               <Route index path='Home' element={<Home/>}></Route>
               <Route path='Todo' element={<Todo/>}></Route>
               <Route path='LogBook' element={<Logbook/>}></Route>
-              {/* <Route path=':id' element={<Logbook/>}></Route> */}
               <Route path='Resource' element={<Resource/>}></Route>
             </Route>
           <Route path='*' element={<Erorr/>}></Route>
